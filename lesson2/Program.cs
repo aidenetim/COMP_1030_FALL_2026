@@ -16,34 +16,56 @@ public class Program
         // STEP 4: Compile and run the app
 
         // STEP 5: Change the value of the variable set in STEP 2
+        test_String = "not_Stringy";
 
         // STEP 6: Write the value of the variable to the console using the WriteLine method again
+        Console.WriteLine(test_String);
 
         // STEP 7: Modify the above two lines that generate the output to make a phrase ("The weather today is " + weatherToday)
+        string weatherToday = "windy";
+        Console.WriteLine("The weather today is " + weatherToday);
 
         // STEP 8: Change STEP 7 so that the line of code uses string interpolation instead of concatenation ($"The weather today is {weatherToday}")
+        Console.WriteLine($"The weather today is {weatherToday}!!!");
 
         // STEP 9: Write a new line that builds a phrase using two variables
+        string mood = "Happy";
+        string dayOfTheWeek = "Friday";
+        Console.WriteLine($"\nToday is {dayOfTheWeek}, so you should be {mood}!!!");
 
         // STEP 10: You can output the number of letters in a string using the Length property
+        Console.WriteLine(dayOfTheWeek.Length);
 
         // STEP 11: Create a string variable for a sentence with spaces at the start and end
+        string scentence = " This is a Scentence "; //there should be 21
 
         // STEP 12: Output the above string variable to the console with square brackets around it
+        Console.WriteLine($"[{scentence}]");
 
         // STEP 13: There are other methods for string objects, like Trim() - create a new string variable from the trimmed variable above
+        string trimmed = scentence.Trim();
+        Console.WriteLine();
+        Console.WriteLine(scentence);
+        Console.WriteLine(trimmed);
 
         // STEP 14: Output the above string variable also between square brackets
+        Console.WriteLine($"[{trimmed}]");
 
         // STEP 15: We can also find and replace text in a string - change "windy" to "snowy" in the above variable using the Replace() method
+        string replaced = weatherToday.Replace("windy", "snowy");
 
         // STEP 16: Output the revised variable to the console
+        Console.WriteLine(replaced);
 
         // STEP 17: Output the above sentence, but in ALL CAPS using the ToUpper string method
+        Console.WriteLine($"This is all uppercased: {scentence.ToUpper()}");
 
         // STEP 18: We can even search for strings - the Contains() method looks for a string and returns 'true' if it is found, and 'false' if it is not - check to see if the new forecast for Wednesday is "snowy"
+        Console.WriteLine($"Is the forecast for wednesday snowy: {weatherToday.Contains("snowy")}, the weather is {weatherToday}");
 
         // STEP 19: Update the above to look for "rainy" instead
+        weatherToday = "rainy";
+        Console.WriteLine($"Is the forecast for wednesday rainy: {weatherToday.Contains("rainy")}, the weather is {weatherToday}");
 
         /* Inspired by the Microsoft tutorial at https:// learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/hello-world */
     }
